@@ -1,13 +1,15 @@
 {
   "name": "movies",
   "private": true,
+  "homepage": "https://makisary.github.io/verstka_2kurs_1",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "react-scripts start", 
+    "build": "react-scripts build", 
+    "test": "react-script test",
+    "deploy": "gh-pages -d build", 
+    "predeploy": "npm run build" 
   },
   "dependencies": {
     "materialize-css": "^1.0.0-rc.2",
