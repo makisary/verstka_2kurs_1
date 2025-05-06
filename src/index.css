@@ -1,11 +1,11 @@
 :root {
-  font-family: system-ui, Avenir, Work SAns , Arial, sans-serif;
+  font-family: system-ui, Avenir, 'Work Sans', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,19 +24,18 @@
 }
 
 /* Анимации */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-3px); }
-  75% { transform: translateX(3px); }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.3s ease-out;
+  animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 /* Сообщения об ошибках */
@@ -61,7 +60,7 @@
   color: #ff4444;
   font-size: 2.5rem;
   margin-right: 1.2rem;
-  animation: shake 0.5s ease-in-out;
+  animation: pulse 0.8s infinite; 
 }
 
 .error-text h5 {
@@ -177,6 +176,7 @@
   }
   
   .search-button {
+      background: #FF6B00;
       width: 100%;
       border-radius: 25px;
       height: 50px;
@@ -252,6 +252,7 @@
 
 .card {
   background-color: #1a1a1a;
+  border: 1px solid #333;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -294,13 +295,13 @@
 }
 
 .search-input:focus {
-  border-color: #2DD4BF;
-  box-shadow: 0 0 20px rgba(45,212,191,0.3);
+  border-color: #FF6B00;
+  box-shadow: 0 0 20px rgba(255,107,0,0.3);
 }
 
 /* Кнопка поиска */
 .search-button {
-  background: #2DD4BF;
+  background: #FF6B00;
   border: none;
   width: 60px;
   height: 60px;
@@ -312,8 +313,7 @@
 }
 
 .search-button:hover {
-  background: #1AA592;
-  transform: scale(1.05);
+  background: #CC5500 scale(1.05);
 }
 
 .search-button i {
@@ -339,10 +339,11 @@
 }
 
 .filter-label.active {
-  background: #2DD4BF;
-  border-color: #2DD4BF;
-  box-shadow: 0 4px 15px rgba(45,212,191,0.25);
+  background: #FF6B00;
+  border-color: #FF6B00;
+  box-shadow: 0 4px 15px rgba(255,107,0,0.25);
 }
+
 
 .filter-label.active .filter-text {
   color: #1a1a1a;
@@ -390,7 +391,7 @@
 }
 
 .developer-link {
-  color: #2DD4BF !important;
+  color: #FF6B00 !important;
   text-decoration: none;
   position: relative;
 }
@@ -402,7 +403,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: #2DD4BF;
+  color: #FF6B00 ;
   transition: width 0.3s ease;
 }
 
@@ -422,7 +423,7 @@
 }
 
 .version {
-  background: rgba(45, 212, 191, 0.15);
+  background: rgba(255,107,0,0.15);
   padding: 4px 10px;
   border-radius: 15px;
   font-size: 0.8rem;
