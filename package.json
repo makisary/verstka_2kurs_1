@@ -6,16 +6,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite start", 
     "build": "vite build",
     "lint": "eslint .",
+    "preview": "vite preview",
     "deploy": "gh-pages -d build", 
     "predeploy": "npm run build" 
   },
   "dependencies": {
     "materialize-css": "^1.0.0-rc.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
